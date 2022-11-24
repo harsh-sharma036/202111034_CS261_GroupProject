@@ -134,7 +134,75 @@
     </div>
   </div>
 
+  <br></br>
   
+  <!--Main Content-->
+  <div class="container-fluid">
+    <div class="row">
+      <!--Left container-->
+      <div class="col-sm bg-warning p-2 m-2 rounded" style="height: 80vh; border: 0.25em solid black; overflow-y: scroll;">
+        <h4 class="mb-3">Complaints</h4>
+  
+        <!--Left container items-->
+        <div class="bg-dark rounded mb-2 h-50 w-100"></div>
+  
+        
+        <button class="btn btn-primary position-absolute" id="newIssue" style="top: 81.5%; border: 0.15em solid black; ">raise an issue</button>
+        
+      </div>
+  
+      
+      <!--Right container-->
+      <div class="col-sm bg-primary p-2 m-2 rounded" style="height: 80vh; border: 0.25em solid black;">
+        <h4>Timeline</h4>
+      </div>
+    </div>
+  
+    <!--Inside Container ==>> Outisde Row-->
+  
+    <!--Inside issue popup-->
+    <div id="newIssuePopUp" class="position-absolute bg-light h-50 w-50 rounded" style="top: 50%; left: 50%; translate: -50% -50%; visibility:hidden;">
+      
+      <div class="m-3">
+        <form action="get">
+          <label for="issueSite" class="form-label">Select Site: </label>
+          <input required="" class="form-control" list="issueSiteList" id="issueSite" placeholder="Type to search...">
+          <datalist id="issueSiteList" name="issueSite">
+            <option value="Hostel">
+            </option><option value="Institute">
+            </option></datalist>
+  
+  
+          <br>
+          <label for="issueCat" class="form-label">Select category: </label>
+          <input required="" class="form-control" list="issueCatList" id="issueCat" placeholder="Type to search...">
+          <datalist id="issueCatList">
+            <option value="electric">
+            </option><option value="plumbing">
+            </option><option value="transport">
+            </option><option value="carpentry">
+            </option><option value="security">
+            </option><option value="medical">
+            </option><option value="water">
+            </option><option value="mess">
+            </option><option value="equipment">
+            </option><option value="other">
+          </option></datalist>
+  
+        
+          <div class="m-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Describe the issue</label>
+            <textarea required="" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+  
+          <button type="submit" class="btn btn-outline-success position-absolute mb-2 mr-2" id="submitIssue" style="top:87%; left: 76%;">Submit</button>
+        </form>  
+      </div>
+    </div>
+    <!--Inside issue popup-->
+  
+  
+  </div>
 
   <br></br>
 
@@ -188,6 +256,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);">
             </div>
         </div>
     </div>
+    
   
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
