@@ -47,21 +47,16 @@
                     <a class="nav-link" href="/contact.html">Contact Us</a>
                 </li>
 
-
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
             <div class="mx-2">
-                <button class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal">Login</button>
-                <button class="btn btn-outline-success" data-toggle="modal" data-target="#signupModal">SignUp</button>
+              <button class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal" style="margin-right: 10px;">Login</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#signupModal">SignUp</button>
             </div>
         </div>
     </nav>
 
- 
-  
+
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -76,15 +71,15 @@
             <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" required>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
                 <div class="form-group form-check">
-                  <input type="radio" class="form-check-input" id="exampleCheck1">
+                  <input type="radio" class="form-check-input" id="exampleCheck1" required>
                   <label class="form-check-label" for="exampleCheck1">I'm not a Robot</label>
                 </div>
                 <button type="submit" class="btn btn-primary" formaction="./main.html">Login</button>
@@ -112,16 +107,16 @@
             <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" required>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
                 <div class="form-group">
                   <label for="cexampleInputPassword1">Confirm Password</label>
-                  <input type="password" class="form-control" id="cexampleInputPassword1">
+                  <input type="password" class="form-control" id="cexampleInputPassword1" required>
                 </div>
                  
                 <button type="submit" class="btn btn-primary" formaction="./main.html">Create Account</button>
