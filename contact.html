@@ -53,42 +53,48 @@
         </ul>
         <div class="mx-2">
             <button class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal" style="margin-right: 10px;">Login</button>
-            <button class="btn btn-outline-success" data-toggle="modal" data-target="#signupModal">SignUp</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#signUpModal">SignUp</button>
         </div>
     </div>
 </nav>
 
 
   <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login to E-Complaint Box</h5>
+          <h5 class="modal-title" id="loginModalLabel1"><strong>Login to E-Complaint Box</strong></h5>
+          <hr>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" required>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" required>
-                </div>
-                <div class="form-group form-check">
-                  <input type="radio" class="form-check-input" id="exampleCheck1" required>
+          <form onsubmit="login(event)">
+            <div class="form-group">
+              <label for="loginInputEmail1"><strong>Email address</strong></label>
+              <input type="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp1"
+                placeholder="name@gmail.com" required style="border-color: rgb(35,31,31);">
+              <small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="loginInputPassword1"><strong>Password</strong></label>
+              <input type="password" class="form-control" id="loginInputPassword1" placeholder="password" required style="border-color: rgb(35,31,31);">
+            </div>
+            <!-- <div class="form-group form-check">
+                  <input type="radio" class="form-check-in" id="exampleCheck1" required>
                   <label class="form-check-label" for="exampleCheck1">I'm not a Robot</label>
-                </div>
-                <button type="submit" class="btn btn-primary" formaction="./main.html">Login</button>
-              </form>
+                </div> -->
+                <div id="err1"></div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
         </div>
+
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -96,40 +102,43 @@
 
   
   <!-- Sign Up Modal -->
-  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Get an E-Complaint Box Account</h5>
+          <h5 class="modal-title" id="signUpModalLabel2"><strong>Get an E-Complaint Account</strong></h5>
+          <hr>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" required>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" required>
-                </div>
-                <div class="form-group">
-                  <label for="cexampleInputPassword1">Confirm Password</label>
-                  <input type="password" class="form-control" id="cexampleInputPassword1" required>
-                </div>
-                 
-                <button type="submit" class="btn btn-primary" formaction="./main.html">Create Account</button>
-              </form>
+          <form onsubmit="signUp(event)">
+            <div class="form-group">
+              <label for="signUpInputEmail2"><strong>Email address</strong></label>
+              <input type="email" class="form-control" id="signUpInputEmail2" aria-describedby="emailHelp"
+                placeholder="name@gmail.com" required style="border-color: rgb(35,31,31);">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="signUpInputPassword2"><strong>Password</strong></label>
+              <input type="password" class="form-control" id="signUpInputPassword2" placeholder="password" required style="border-color: rgb(35,31,31);">
+            </div>
+          
+                <div id ="err"></div>
+
+            <button type="submit" class="btn btn-primary">Create Account</button>
+          </form>
         </div>
+
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
+
 
   <!--Main Body-->  
 <div class="row" style="width: 95rem; margin-bottom: 30px;">
@@ -142,20 +151,19 @@
     <br>
     <form>
       <div class="form-group">
-          <label for="exampleFormControlInput1"><strong>Email address</strong></label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          <label for="signUpFormControlInput1"><strong>Email address</strong></label>
+          <input type="email" class="form-control" id="signUpFormControlInput1" placeholder="name@gmail.com" required style="border-color: rgb(35, 31, 31)">
       </div>
 
       <div class="form-group">
-        <label for="exampleFormControlInput1"><strong>Password</strong></label>
-        <input type="password" class="form-control" id="exampleFormControlInput1" required>
+        <label for="signUpFormControlInput1"><strong>Password</strong></label>
+        <input type="password" class="form-control" id="signUpFormControlInput1" placeholder="password" required style="border-color: rgb(35, 31, 31);">
     </div>
 
       <div class="form-group">
-          <label for="exampleFormControlTextarea2"><strong>Your Suggestions</strong></label>
-          <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" required></textarea>
+          <label for="signUpFormControlTextarea2"><strong>Your Suggestions</strong></label>
+          <textarea class="form-control" id="signUpFormControlTextarea2" rows="3" required style="resize: none; height: 160px; border-color: rgb(35, 31, 31);"></textarea>
       </div>
-      <br>
       <button class="btn btn-success" style="width: 15%; margin-bottom: 2rem; ">Submit</button>
   </form>
 
@@ -228,6 +236,12 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+       <!-- <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+  <script src="./Scripts/auth.js"></script>
+
 </body>
 
 </html>
